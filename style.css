@@ -1,35 +1,45 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: #f4f4f4;
+  background-color: #f0f2f5;
 }
 
 .menu-lateral {
   width: 240px;
-  background-color: #004080;
+  background-color: #002f6c;
   padding: 20px 10px;
   height: 100vh;
   position: fixed;
   overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.menu-lateral ul.menu, .menu-lateral details ul {
+.menu-lateral ul.menu,
+.menu-lateral details ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.menu-lateral li, .menu-lateral summary {
+.menu-lateral li,
+.menu-lateral summary {
   color: white;
   padding: 10px;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu-lateral li:hover,
+.menu-lateral summary:hover {
+  background-color: #004a99;
 }
 
 .menu-lateral li a {
   color: white;
   text-decoration: none;
+  display: block;
 }
 
 .menu-lateral details {
@@ -46,13 +56,41 @@ body {
 
 main {
   margin-left: 260px;
-  padding: 30px;
+  padding: 40px;
   background-color: white;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-h1 {
-  color: #004080;
+h1, h2 {
+  color: #002f6c;
 }
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.botao-voltar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.botao-voltar:hover {
+  background-color: #0066cc;
+}
+
 
